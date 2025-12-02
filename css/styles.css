@@ -1,0 +1,93 @@
+:root{
+  --bg-primary:#F7F2DE;
+  --text:#0B0A08;
+  --white:#FFFFFF;
+  --green:#008F51;
+
+  --serif:"Frank Ruhl Libre", serif;
+  --sans:"Arimo", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+*{ box-sizing:border-box; }
+body{ margin:0; background:var(--bg-primary); color:var(--text); }
+
+/* topbar */
+.topbar{
+  height:44px;
+  display:grid;
+  grid-template-columns:44px 1fr 44px;
+  align-items:center;
+  padding:0 8px;
+  background:var(--bg-primary);
+}
+.topbar__logo{
+  justify-self:center;
+  font-family:var(--serif);
+  font-weight:300;
+  letter-spacing:.08em;
+  text-decoration:none;
+  color:var(--text);
+}
+
+/* menu icon */
+.icon-btn{
+  width:44px; height:44px;
+  border:0; background:transparent;
+}
+.burger{
+  display:block; width:18px; height:2px;
+  background:var(--text);
+  position:relative; margin:0 auto;
+}
+.burger::before,
+.burger::after{
+  content:""; position:absolute; left:0;
+  width:18px; height:2px;
+  background:var(--text);
+}
+.burger::before{ top:-6px; }
+.burger::after{ top:6px; }
+
+/* green badge */
+.badge{
+  justify-self:end;
+  width:26px; height:20px;
+  border-radius:999px;
+  border:0;
+  background:var(--green);
+  color:var(--white);
+  font:400 12px/1 var(--sans);
+}
+
+/* hero */
+.hero{ position:relative; height:380px; overflow:hidden; }
+.hero__img{ width:100%; height:100%; object-fit:cover; display:block; }
+.hero__overlay{
+  position:absolute; inset:0;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:16px;
+  color:var(--white);
+}
+.hero__title{
+  font-family:var(--serif);
+  font-weight:300;
+  font-size:96px;
+  margin:0;
+}
+.hero__divider{
+  width:1px; height:60px;
+  background:var(--white);
+  margin:12px 0 18px;
+}
+.hero__subtitle{
+  font-family:var(--sans);
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-size:16px;
+  margin:0;
+}
+
