@@ -45,6 +45,24 @@ body{ margin:0; background:var(--bg-primary); color:var(--text); }
   text-decoration:none;
   color:var(--text);
 }
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:40px;
+  padding:10px 18px;
+  border-radius:6px;
+  border:0;
+  background:var(--red);
+  color:var(--bg-secondary);
+  font:400 14px/1 var(--sans);
+  text-decoration:none;
+  cursor:pointer;
+  transition:background-color .15s ease;
+}
+
+.btn:hover{ background:var(--red-hover); }
+.btn:focus-visible{ outline:3px solid var(--blue-light); outline-offset:2px; }
 
 /* menu icon */
 .icon-btn{
