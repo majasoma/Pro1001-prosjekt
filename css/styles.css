@@ -91,3 +91,12 @@ body{ margin:0; background:var(--bg-primary); color:var(--text); }
   margin:0;
 }
 
+:root{
+  --bg-primary: #F7F2DE;
+  --text: #0B0A08;
+  --bg-secondary: #FFFFFF;
+  --red: #DC4131;
+  --red-hover: #AE2E21;
+  --blue-light: #E1EAF0;
+  --green: #008F51;
+}
