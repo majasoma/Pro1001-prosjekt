@@ -153,3 +153,19 @@ body{ margin:0; background:var(--bg-primary); color:var(--text); }
     border-left:1px solid rgba(11,10,8,.35);
   }
 }
+/* FORCE hero text to be white (overrides other typography rules) */
+.hero__overlay{ color: var(--bg-secondary); }
+.hero__overlay *{ color: inherit; }
+
+.hero__divider{ background: var(--bg-secondary); }
+
+/* Optional: make text more readable on the photo */
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(11,10,8,.18);
+  pointer-events:none;
+}
+.hero__overlay{ position:absolute; inset:0; z-index:1; }
+.hero__img{ display:block; width:100%; height:100%; object-fit:cover; }
