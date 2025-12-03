@@ -127,3 +127,29 @@ body{ margin:0; background:var(--bg-primary); color:var(--text); }
 }
 
 
+.two-cards{
+  background:var(--bg-secondary);
+  display:grid;
+  gap:0;
+  border-top:1px solid rgba(11,10,8,.35);
+}
+
+.card{
+  padding:28px 18px 30px;
+  text-align:center;
+}
+
+.card + .card{
+  border-top:1px solid rgba(11,10,8,.35);
+}
+
+/* Desktop: side-by-side */
+@media (min-width: 900px){
+  .two-cards{
+    grid-template-columns:1fr 1fr;
+  }
+  .card + .card{
+    border-top:none;
+    border-left:1px solid rgba(11,10,8,.35);
+  }
+}
