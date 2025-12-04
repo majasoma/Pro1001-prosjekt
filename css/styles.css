@@ -1,9 +1,9 @@
-
 :root{
   /* Colors */
   --bg-primary:#F7F2DE;
   --bg-secondary:#FFFFFF;
   --text:#0B0A08;
+  --white:#FFFFFF;
 
   --red:#DC4131;
   --red-hover:#AE2E21;
@@ -13,20 +13,93 @@
   /* Fonts */
   --serif:"Frank Ruhl Libre", serif;
   --sans:"Arimo", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Type sizes (mobile default) */
+  --fs-logo: 75px;
+  --fs-header: 24px;
+  --fs-subheader: 18px;
+  --fs-accent: 16px;
+  --fs-body: 16px;
+  --fs-largebody: 18px;
+}
+
+@media (min-width: 900px){
+  :root{
+    --fs-logo: 200px;
+    --fs-header: 36px;
+    --fs-subheader: 20px;
+    --fs-accent: 20px;
+    --fs-largebody: 20px;
+  }
 }
 
 *{ box-sizing:border-box; }
 
 html, body{ height:100%; }
+
 body{
   margin:0;
   background:var(--bg-primary);
   color:var(--text);
   font-family:var(--sans);
+  font-weight:400; /* viktig */
 }
 
-*{ box-sizing:border-box; }
-body{ margin:0; background:var(--bg-primary); color:var(--text); }
+/* Fjern browser-default bold på headings */
+h1,h2,h3,h4,h5,h6{
+  margin:0;
+  font: inherit;
+}
+
+/* TYPOGRAPHY SYSTEM */
+.t-logo{
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: var(--fs-logo);
+  letter-spacing: .04em;
+  line-height: 1.05;
+}
+
+.t-header{
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: var(--fs-header);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  line-height: 1.2;
+}
+
+.t-subheader{
+  font-family: var(--sans);
+  font-weight: 400; /* Arimo Regular = 400 */
+  font-size: var(--fs-subheader);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  line-height: 1.25;
+}
+
+.t-accent{
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: var(--fs-accent);
+  line-height: 1.25;
+}
+
+.t-body{
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: var(--fs-body);
+  line-height: 1.45;
+}
+
+.t-largebody{
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: var(--fs-largebody);
+  line-height: 1.45;
+}
+
+
 
 /* topbar */
 .topbar{
