@@ -213,13 +213,38 @@ h1,h2,h3,h4,h5,h6{
   margin:0;
 }
 
+.card{
+  padding: 28px 18px 30px;
+  text-align: center;
+
+  /* NYTT: gjør kortene like høye */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* alle kortbilder får samme “ramme” */
 .card__img{
   display: block;
-  max-width: 320px;   /* gjør bildet mindre */
-  width: 100%;        /* skaler ned på små skjermer */
-  margin: 16px auto;  /* sentrer og gi litt luft */
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 4 / 3;  /* likt sideforhold på begge */
+  object-fit: cover;    /* cropper litt hvis nødvendig */
+  margin: 16px auto;
   border-radius: 16px;
 }
+
+/* tekstblokk før knappen, så knappene havner likt */
+.card__text{
+  max-width: 320px;
+  margin: 12px auto 24px;
+}
+
+/* dytt knappen ned til bunnen av kortet */
+.card .btn{
+  margin-top: auto;
+}
+
 
 .two-cards{
   background:var(--bg-secondary);
