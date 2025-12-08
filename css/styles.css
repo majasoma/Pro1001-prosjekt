@@ -558,3 +558,7 @@ h1,h2,h3,h4,h5,h6{
 .product-card__text{
   margin: 0 0 6px;
 }
+/* Sørg for at hele "STAY UPDATED" er rød, ikke beige blokk inni */
+.newsletter .page{
+  background: transparent;
+}
