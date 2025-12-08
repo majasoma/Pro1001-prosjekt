@@ -44,6 +44,14 @@ body{
   font-family:var(--sans);
   font-weight:400; /* viktig */
 }
+.page{
+  width: min(1120px, 100%);
+  margin-inline: auto;
+  background: var(--bg-primary);
+}
+
+
+
 
 /* Fjern browser-default bold på headings */
 h1,h2,h3,h4,h5,h6{
@@ -168,7 +176,13 @@ h1,h2,h3,h4,h5,h6{
 }
 
 /* hero */
-.hero{ position:relative; height:380px; overflow:hidden; }
+.hero{
+  position: relative;
+  height: clamp(360px, 70vh, 520px);
+  overflow: hidden;
+  color: var(--white);
+}
+
 .hero__img{ width:100%; height:100%; object-fit:cover; display:block; }
 .hero__overlay{
   position:absolute; inset:0;
@@ -199,6 +213,13 @@ h1,h2,h3,h4,h5,h6{
   margin:0;
 }
 
+.card__img{
+  display: block;
+  max-width: 320px;   /* gjør bildet mindre */
+  width: 100%;        /* skaler ned på små skjermer */
+  margin: 16px auto;  /* sentrer og gi litt luft */
+  border-radius: 16px;
+}
 
 .two-cards{
   background:var(--bg-secondary);
