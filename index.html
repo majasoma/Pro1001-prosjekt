@@ -89,7 +89,81 @@
       <!-- senere: Popular produce + footer inn her -->
     </div>
   </main>
+  <!-- FOOTER / NEWSLETTER -->
+  <footer class="newsletter">
+    <div class="page newsletter__inner">
+      <div class="newsletter__brand t-logo-small">FRAM</div>
 
+      <div class="newsletter__content">
+        <h2 class="t-header">STAY UPDATED</h2>
+        <p class="t-body newsletter__text">
+          Sign up for our newsletter to be the first to know about new produce or other exciting news.
+        </p>
+
+        <form class="newsletter-form" action="#" method="post" novalidate>
+          <div class="newsletter-form__field">
+            <label class="sr-only" for="newsletter-name">First name</label>
+            <input id="newsletter-name"
+                   name="first-name"
+                   type="text"
+                   placeholder="First name"
+                   required>
+          </div>
+
+          <div class="newsletter-form__field">
+            <label class="sr-only" for="newsletter-email">E-mail address</label>
+            <input id="newsletter-email"
+                   name="email"
+                   type="email"
+                   placeholder="E-mail address"
+                   required>
+          </div>
+
+          <button class="newsletter-form__submit" type="submit">
+            Send
+          </button>
+        </form>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+      <!-- POPULAR PRODUCE -->
+      <section class="popular" aria-labelledby="popular-title">
+        <h2 id="popular-title" class="t-header">POPULAR PRODUCE</h2>
+
+        <div class="popular-grid">
+          <article class="popular-card">
+            <img src="img/oats.png"
+                 alt="Close-up of rolled oats"
+                 class="popular-card__img">
+            <h3 class="t-subheader popular-card__title">Oats</h3>
+            <p class="t-body popular-card__meta">1 kg</p>
+            <p class="t-body popular-card__price">48 kr / kg</p>
+          </article>
+
+          <article class="popular-card">
+            <img src="img/onion.png"
+                 alt="Red onions in a crate"
+                 class="popular-card__img">
+            <h3 class="t-subheader popular-card__title">Red Onions</h3>
+            <p class="t-body popular-card__meta">0.5 kg</p>
+            <p class="t-body popular-card__price">48 kr / kg</p>
+          </article>
+
+          <article class="popular-card">
+            <img src="img/garlic.png"
+                 alt="Garlic bulbs"
+                 class="popular-card__img">
+            <h3 class="t-subheader popular-card__title">Garlic</h3>
+            <p class="t-body popular-card__meta">0.2 kg</p>
+            <p class="t-body popular-card__price">48 kr / kg</p>
+          </article>
+        </div>
+      </section>
 
 
   <script src="js/main.js"></script>
