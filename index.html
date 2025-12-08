@@ -13,6 +13,7 @@
 </head>
 <body>
 
+  <!-- TOPBAR (kun én gang) -->
   <header class="topbar">
     <button class="icon-btn" type="button" aria-label="Open menu">
       <span class="burger" aria-hidden="true"></span>
@@ -21,10 +22,6 @@
     <a class="topbar__logo" href="index.html">FRAM</a>
 
     <button class="badge" type="button" aria-label="Cart items">0</button>
-  </header>
-
-      <header class="topbar">
-    ...
   </header>
 
   <main>
@@ -43,7 +40,7 @@
       </div>
     </section>
 
-    <!-- ALT UNDER HERO: inni .page -->
+    <!-- ALT UNDER HERO LIGGER INNI .page -->
     <div class="page">
 
       <!-- TWO CARDS -->
@@ -83,13 +80,87 @@
 
       <!-- HOW IT WORKS -->
       <section class="how" aria-labelledby="how-title">
-        ...
+        <div class="how__grid">
+          <div class="how__intro">
+            <h2 id="how-title" class="t-header">
+              THIS IS HOW IT WORKS
+            </h2>
+          </div>
+
+          <div class="how__steps">
+            <article class="how__step">
+              <h3 class="t-subheader">ORDER GROCERIES</h3>
+              <p class="t-body">
+                Fram is a circular service that ensures your kitchen is always stocked.
+                Browse our seasonal selection, choose your items, and place your order online.
+              </p>
+            </article>
+
+            <article class="how__step">
+              <h3 class="t-subheader">STOCK UP</h3>
+              <p class="t-body">
+                Once your order arrives, unpack the produce and store it.
+                Enjoy fresh food from our partner farms at home.
+              </p>
+            </article>
+
+            <article class="how__step">
+              <h3 class="t-subheader">SCAN &amp; REORDER</h3>
+              <p class="t-body">
+                Ready to restock? Grab the containers from your last order
+                and scan the QR codes with our simple web app to reorder your favourites.
+              </p>
+            </article>
+
+            <article class="how__step">
+              <h3 class="t-subheader">SWAP &amp; REUSE</h3>
+              <p class="t-body">
+                When we deliver your new order, simply leave your empty containers outside.
+                We’ll swap them, clean them thoroughly, and reuse them for future deliveries.
+              </p>
+            </article>
+          </div>
+        </div>
       </section>
 
-      <!-- senere: Popular produce + footer inn her -->
-    </div>
+      <!-- POPULAR PRODUCE -->
+      <section class="popular" aria-labelledby="popular-title">
+        <h2 id="popular-title" class="t-header">POPULAR PRODUCE</h2>
+
+        <div class="popular-grid">
+          <article class="popular-card">
+            <img src="img/oats.png"
+                 alt="Close-up of rolled oats"
+                 class="popular-card__img">
+            <h3 class="t-subheader popular-card__title">Oats</h3>
+            <p class="t-body popular-card__meta">1 kg</p>
+            <p class="t-body popular-card__price">48 kr / kg</p>
+          </article>
+
+          <article class="popular-card">
+            <img src="img/onion.png"
+                 alt="Red onions in a crate"
+                 class="popular-card__img">
+            <h3 class="t-subheader popular-card__title">Red Onions</h3>
+            <p class="t-body popular-card__meta">0.5 kg</p>
+            <p class="t-body popular-card__price">48 kr / kg</p>
+          </article>
+
+          <article class="popular-card">
+            <img src="img/garlic.png"
+                 alt="Garlic bulbs"
+                 class="popular-card__img">
+            <h3 class="t-subheader popular-card__title">Garlic</h3>
+            <p class="t-body popular-card__meta">0.2 kg</p>
+            <p class="t-body popular-card__price">48 kr / kg</p>
+          </article>
+        </div>
+      </section>
+
+    </div> <!-- /page -->
   </main>
-  <!-- FOOTER / NEWSLETTER -->
+
+  <!-- FOOTER / NEWSLETTER (full bredde, innhold inni .page) -->
   <footer class="newsletter">
     <div class="page newsletter__inner">
       <div class="newsletter__brand t-logo-small">FRAM</div>
@@ -126,45 +197,6 @@
       </div>
     </div>
   </footer>
-
-  <script src="js/main.js"></script>
-</body>
-</html>
-
-      <!-- POPULAR PRODUCE -->
-      <section class="popular" aria-labelledby="popular-title">
-        <h2 id="popular-title" class="t-header">POPULAR PRODUCE</h2>
-
-        <div class="popular-grid">
-          <article class="popular-card">
-            <img src="img/oats.png"
-                 alt="Close-up of rolled oats"
-                 class="popular-card__img">
-            <h3 class="t-subheader popular-card__title">Oats</h3>
-            <p class="t-body popular-card__meta">1 kg</p>
-            <p class="t-body popular-card__price">48 kr / kg</p>
-          </article>
-
-          <article class="popular-card">
-            <img src="img/onion.png"
-                 alt="Red onions in a crate"
-                 class="popular-card__img">
-            <h3 class="t-subheader popular-card__title">Red Onions</h3>
-            <p class="t-body popular-card__meta">0.5 kg</p>
-            <p class="t-body popular-card__price">48 kr / kg</p>
-          </article>
-
-          <article class="popular-card">
-            <img src="img/garlic.png"
-                 alt="Garlic bulbs"
-                 class="popular-card__img">
-            <h3 class="t-subheader popular-card__title">Garlic</h3>
-            <p class="t-body popular-card__meta">0.2 kg</p>
-            <p class="t-body popular-card__price">48 kr / kg</p>
-          </article>
-        </div>
-      </section>
-
 
   <script src="js/main.js"></script>
 </body>
