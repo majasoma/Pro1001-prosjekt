@@ -558,6 +558,57 @@ h1,h2,h3,h4,h5,h6{
 .product-card__text{
   margin: 0 0 6px;
 }
+/* PARTNER FARMS / MAP -------------------------------------------- */
+
+.farms{
+  background: var(--bg-primary);
+  border-top: 1px solid rgba(11,10,8,.25);
+  border-bottom: 1px solid rgba(11,10,8,.25);
+  padding: 40px 0;
+}
+
+.farms__grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+}
+
+/* venstre kolonne med tekst */
+.farms__intro{
+  padding: 24px 18px;
+  display: flex;
+  align-items: center;
+}
+
+/* høyre kolonne med kart */
+.farms__map-wrapper{
+  padding: 24px 18px;
+}
+
+.farms__map{
+  display: block;
+  width: 100%;
+  min-height: 260px;
+  border: 0;
+  border-radius: 16px;
+}
+
+/* desktop: to kolonner, deling lik skjermbildet */
+@media (min-width: 900px){
+  .farms__grid{
+    grid-template-columns: 1.1fr 2fr;
+  }
+
+  .farms__intro{
+    border-right: 1px solid rgba(11,10,8,.25);
+    padding-right: 32px;
+  }
+
+  .farms__map-wrapper{
+    padding-left: 32px;
+  }
+}
+
 /* Sørg for at hele "STAY UPDATED" er rød, ikke beige blokk inni */
 .newsletter .page{
   background: transparent;
