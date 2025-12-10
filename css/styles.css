@@ -613,6 +613,78 @@ h1,h2,h3,h4,h5,h6{
 .newsletter .page{
   background: transparent;
 }
+/* CONTACT PAGE --------------------------------------------------- */
+
+.contact-intro{
+  background: var(--bg-primary);
+  padding: 32px 0 16px;
+}
+
+.contact-intro .t-header{
+  margin-bottom: 8px;
+}
+
+.contact{
+  background: var(--bg-secondary);
+  padding: 32px 0 48px;
+  border-top: 1px solid rgba(11,10,8,.25);
+}
+
+.contact__grid{
+  display: grid;
+  gap: 24px;
+}
+
+@media (min-width: 900px){
+  .contact__grid{
+    grid-template-columns: 1.1fr 2fr;
+    align-items: flex-start;
+  }
+
+  .contact__info{
+    padding-right: 32px;
+    border-right: 1px solid rgba(11,10,8,.25);
+  }
+
+  .contact__form-wrapper{
+    padding-left: 32px;
+  }
+}
+
+.contact-form{
+  display: grid;
+  gap: 14px;
+  max-width: 480px;
+}
+
+.contact-form__field{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+  font: 400 14px/1.4 var(--sans);
+  padding: 8px 10px;
+  border-radius: 2px;
+  border: 1px solid rgba(11,10,8,.35);
+}
+
+.contact-form__error{
+  margin: 0;
+  font-size: 13px;
+  color: var(--red);
+  min-height: 1em;
+}
+
+.contact-form__success{
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--green);
+}
+
 /* page-wrapper inni fullbredde-seksjoner skal ikke farge bakgrunnen */
 .popular .page,
 .newsletter .page{

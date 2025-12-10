@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FRAM | Contact us</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Frank+Ruhl+Libre:wght@300;400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <button class="icon-btn" type="button" aria-label="Open menu">
+      <span class="burger" aria-hidden="true"></span>
+    </button>
+
+    <a class="topbar__logo" href="index.html">FRAM</a>
+
+    <button class="badge" type="button" aria-label="Cart items">0</button>
+  </header>
+
+  <main>
+    <!-- INTRO -->
+    <section class="contact-intro" aria-labelledby="contact-title">
+      <div class="page">
+        <h1 id="contact-title" class="t-header">
+          CONTACT US
+        </h1>
+        <p class="t-largebody">
+          Questions about deliveries, products, or our partner farms?
+          Send us a message and we’ll get back to you as soon as we can.
+        </p>
+      </div>
+    </section>
+
+    <!-- FORM -->
+    <section class="contact" aria-label="Contact form">
+      <div class="page contact__grid">
+
+        <div class="contact__info">
+          <h2 class="t-subheader">HOW CAN WE HELP?</h2>
+          <p class="t-body">
+            You can ask about delivery times, sustainability, farm locations,
+            or specific products. The more detail you give us, the easier it
+            is for us to help.
+          </p>
+        </div>
+
+        <div class="contact__form-wrapper">
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="contact-form__field">
+              <label class="t-body" for="contact-name">Full name</label>
+              <input id="contact-name"
+                     name="name"
+                     type="text"
+                     required>
+              <p class="contact-form__error" data-for="contact-name"></p>
+            </div>
+
+            <div class="contact-form__field">
+              <label class="t-body" for="contact-email">E-mail address</label>
+              <input id="contact-email"
+                     name="email"
+                     type="email"
+                     required>
+              <p class="contact-form__error" data-for="contact-email"></p>
+            </div>
+
+            <div class="contact-form__field">
+              <label class="t-body" for="contact-topic">Topic</label>
+              <select id="contact-topic" name="topic" required>
+                <option value="">Please choose</option>
+                <option value="delivery">Delivery</option>
+                <option value="products">Products</option>
+                <option value="farms">Partner farms</option>
+                <option value="other">Other</option>
+              </select>
+              <p class="contact-form__error" data-for="contact-topic"></p>
+            </div>
+
+            <div class="contact-form__field">
+              <label class="t-body" for="contact-message">Message</label>
+              <textarea id="contact-message"
+                        name="message"
+                        rows="5"
+                        required></textarea>
+              <p class="contact-form__error" data-for="contact-message"></p>
+            </div>
+
+            <button class="newsletter-form__submit" type="submit">
+              Send message
+            </button>
+
+            <p class="contact-form__success" id="contact-success" aria-live="polite"></p>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Gjenbruk samme footer som på index/products -->
+  <footer class="newsletter">
+    <div class="page newsletter__inner">
+      <div class="newsletter__brand t-logo-small">FRAM</div>
+
+      <div class="newsletter__content">
+        <h2 class="t-header">STAY UPDATED</h2>
+        <p class="t-body newsletter__text">
+          Sign up for our newsletter to be the first to know about new produce or other exciting news.
+        </p>
+
+        <form class="newsletter-form" action="#" method="post" novalidate>
+          <div class="newsletter-form__field">
+            <label class="sr-only" for="newsletter-name">First name</label>
+            <input id="newsletter-name"
+                   name="first-name"
+                   type="text"
+                   placeholder="First name"
+                   required>
+          </div>
+
+          <div class="newsletter-form__field">
+            <label class="sr-only" for="newsletter-email">E-mail address</label>
+            <input id="newsletter-email"
+                   name="email"
+                   type="email"
+                   placeholder="E-mail address"
+                   required>
+          </div>
+
+          <button class="newsletter-form__submit" type="submit">
+            Send
+          </button>
+        </form>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
