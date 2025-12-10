@@ -562,3 +562,9 @@ h1,h2,h3,h4,h5,h6{
 .newsletter .page{
   background: transparent;
 }
+/* page-wrapper inni fullbredde-seksjoner skal ikke farge bakgrunnen */
+.popular .page,
+.newsletter .page{
+  background: transparent;
+}
+
