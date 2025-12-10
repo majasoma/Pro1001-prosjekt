@@ -68,3 +68,32 @@ if (contactForm) {
     }
   }
 }
+// SIDE MENU TOGGLE ------------------------------------------------
+
+
+const burgerBtn = document.querySelector('.icon-btn');
+const sideMenu = document.querySelector('.side-menu');
+const sideMenuClose = document.querySelector('.side-menu__close');
+
+if (burgerBtn && sideMenu) {
+  burgerBtn.addEventListener('click', () => {
+    sideMenu.classList.add('side-menu--open');
+    burgerBtn.setAttribute('aria-expanded', 'true');
+  });
+}
+
+if (sideMenu && sideMenuClose) {
+  sideMenuClose.addEventListener('click', () => {
+    sideMenu.classList.remove('side-menu--open');
+    burgerBtn.setAttribute('aria-expanded', 'false');
+    burgerBtn.focus();
+  });
+
+  sideMenu.addEventListener('click', (event) => {
+    if (event.target.matches('.side-menu__link')) {
+      sideMenu.classList.remove('side-menu--open');
+      burgerBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
