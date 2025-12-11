@@ -244,7 +244,9 @@ h1,h2,h3,h4,h5,h6{
   text-align:center;
   padding:16px;
   color:var(--white);
+  z-index: 2;        /* legg til denne linjen */
 }
+
 
 /* FRAM divider */
 .hero__divider{
@@ -254,13 +256,13 @@ h1,h2,h3,h4,h5,h6{
   margin:12px 0 18px;
 }
 
-/* gjør tekst mer lesbar over bildet */
 .hero::after{
   content:"";
   position:absolute;
   inset:0;
   background: rgba(11,10,8,.18);
   pointer-events:none;
+  z-index: 1;        /* legg til denne linjen her */
 }
 
 /* TWO CARDS ------------------------------------------------------ */
@@ -684,6 +686,119 @@ h1,h2,h3,h4,h5,h6{
   font-size: 14px;
   color: var(--green);
 }
+/* CHAT PAGE ------------------------------------------------------ */
+
+.chat-page .hero--chat{
+  height: calc(100vh - 44px);   /* fyller skjermen under topbar */
+  min-height: 560px;
+}
+
+
+
+/* chat-kortet skal ligge over alt */
+.chat-overlay{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 40px 16px 60px;
+  z-index: 3;
+}
+
+/* selve chat-kortet */
+.chat__card{
+  width: min(420px, 100%);
+  background: var(--bg-secondary);
+  border-radius: 20px;
+  padding: 18px 16px 14px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.25);
+  display: flex;
+  flex-direction: column;
+}
+
+/* vinduet med meldinger */
+.chat__window{
+  flex: 1;
+  background: #FDFBF3;
+  border-radius: 14px;
+  padding: 10px;
+  margin-bottom: 8px;
+  border: 1px solid rgba(11,10,8,.12);
+  overflow-y: auto;
+}
+
+/* meldinger */
+.chat__messages{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chat__message{
+  display: flex;
+}
+
+.chat__message--bot{
+  justify-content: flex-start;
+}
+
+.chat__message--user{
+  justify-content: flex-end;
+}
+
+.chat__bubble{
+  max-width: 85%;
+  padding: 8px 10px;
+  border-radius: 16px;
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.chat__message--bot .chat__bubble{
+  background: #FFF3D6; /* gulaktig, som Figma */
+}
+
+.chat__message--user .chat__bubble{
+  background: #E1EAF0; /* blå bubble for bruker */
+}
+
+/* statuslinje (loading / error) */
+.chat__status{
+  min-height: 1em;
+  font-size: 12px;
+  margin: 2px 2px 4px;
+}
+
+/* input + knapp nederst */
+.chat__form{
+  display: flex;
+  gap: 6px;
+}
+
+.chat__form input{
+  flex: 1;
+  border-radius: 999px;
+  border: 1px solid rgba(11,10,8,.35);
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+.chat__submit{
+  min-height: auto;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+/* liten AI-disclaimer */
+.chat__note{
+  font-size: 11px;
+  opacity: .7;
+  margin-top: 4px;
+}
+
+
 /* SIDE MENU (GREEN) --------------------------------------------- */
 
 .side-menu{
@@ -700,27 +815,38 @@ h1,h2,h3,h4,h5,h6{
   display: flex;
   flex-direction: column;
 }
-
 .side-menu--open{
   transform: translateX(0);
 }
-
 .side-menu__close{
-  border: none;
-  background: transparent;
+  align-self: flex-start;      /* holder den til venstre */
+  background: transparent;     /* fjerner hvit bakgrunn */
+  border: none;                /* fjerner kant */
   font: 400 18px/1 var(--sans);
-  align-self: flex-start;
+  padding: 0;
+  margin-bottom: 24px;         /* litt luft ned til meny-lenker */
   cursor: pointer;
 }
 
+
+
+/* liste inni menyen fyller høyden, så vi kan dytte siste punkt ned */
 .side-menu__list{
   list-style: none;
-  margin: 40px 0 0;
+  margin: 32px 0 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   gap: 24px;
+  height: 100%;
 }
+
+/* gjør at CHECKOUT havner i bunnen */
+.side-menu__list li:last-child{
+  margin-top: auto;
+}
+
+
 
 .side-menu__link{
   text-decoration: none;
