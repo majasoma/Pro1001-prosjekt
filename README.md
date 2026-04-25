@@ -22,8 +22,16 @@ Du kan også bruke Live Server i Visual Studio Code for enklere lokal testing.
 
 ## Kjente begrensninger
 
+
 Prosjektet er kun frontend og har ikke backend eller database.
 
 Kontaktskjemaet har validering i JavaScript, men sender ikke data til en server.
 
-Chat funksjonen er avhengig av gyldig API nøkkel og internettilgang.
+Chat-siden er laget som en demonstrasjon av hvordan en API-integrasjon kan se ut, men funksjonen er ikke fullt ferdigstilt. Det betyr at den ikke gir full brukerfeedback eller komplette feilmeldinger.
+
+## Mulige forbedringer
+
+Mulige videreutviklinger er bedre tilgjengelighet, tydeligere feilhåndtering, bedre loading states, filtrering av produkter og publisering av nettsiden på nett.
+
+## Maja Soma
+Studentprosjekt i PRO1001 Frontend Essentials
