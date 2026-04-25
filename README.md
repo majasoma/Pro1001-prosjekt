@@ -12,3 +12,10 @@ Det kreves ingen spesiell installasjon for å vise nettsiden.
 
 Chat-funksjonen krever en API-nøkkel. Av sikkerhetsgrunner er den ekte API-nøkkelen ikke inkludert i repositoryet. For å teste chaten lokalt må du legge inn din egen API-nøkkel i riktig JavaScript-fil der det står placeholder.
 
+## Hvordan kjøre prosjektet lokalt
+
+1. Klon eller last ned repositoryet
+2. Åpne prosjektmappen i Visual Studio Code eller en annen kodeeditor
+3. Åpne `index.html` i nettleseren
+
+Du kan også bruke Live Server i Visual Studio Code for enklere lokal testing.
